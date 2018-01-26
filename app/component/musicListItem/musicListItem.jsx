@@ -1,6 +1,6 @@
 import React, { Component }from 'react';
-import './musicListTtem.less';
-import Pubsub from 'pubsub-js'
+import './musicListItem.less';
+import Pubsub from 'pubsub';
 
 
 export default class MusicListItem extends Component{
