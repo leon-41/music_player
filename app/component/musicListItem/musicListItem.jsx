@@ -1,8 +1,18 @@
 import React, { Component }from 'react';
 import './musicListItem.less';
-import Pubsub from 'pubsub';
+import Pubsub from 'pubsub-js';
 
+import PropTypes from 'prop-types';
+import {
+    inject,
+    observer,
+} from 'mobx-react';
 
+@inject((stores) => {
+    return {
+        appState: stores.appState,
+    }
+}) @observer
 export default class MusicListItem extends Component{
 
     playMusic(musicItem){
@@ -11,7 +21,7 @@ export default class MusicListItem extends Component{
 
     deleteMusic(musicItem,e){
         e.stopPropagation();
-        Pubsub.publish('DELETE_MUSIC',musicItem);
+        this.props.appState.deleteMusicItem(musicItem.id);
     }
 
     render(){
@@ -23,4 +33,8 @@ export default class MusicListItem extends Component{
             </li>
         )
     }
+}
+
+MusicListItem.wrappedComponent.propTypes = {
+    appState: PropTypes.object.isRequired,
 }

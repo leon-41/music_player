@@ -1,14 +1,25 @@
 import React, { Component }from 'react';
+
 import MusicListItem from '../component/musicListItem/musicListItem.jsx';
 
+import PropTypes from 'prop-types';
+import {
+    inject,
+    observer,
+} from 'mobx-react';
 
-
+@inject((stores) => {
+    return {
+        appState: stores.appState,
+    }
+}) @observer
 export default class MusicList extends Component{
     render(){
+        let MUSIC_LIST = this.props.appState.musicList;
         let listEle = null;
-        listEle = this.props.musiclist.map((item)=>{
+        listEle = MUSIC_LIST.map((item)=>{
             return <MusicListItem
-                focus={item === this.props.currentMusitItem}
+                focus={false}
                 key={item.id}
                 musicItem={item}
             >
@@ -22,4 +33,8 @@ export default class MusicList extends Component{
             </ul>
         )
     }
+}
+
+MusicList.wrappedComponent.propTypes = {
+    appState: PropTypes.object.isRequired,
 }

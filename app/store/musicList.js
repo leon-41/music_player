@@ -35,6 +35,30 @@ export const MUSIC_LIST = [
         artist: 'Simon & Garfunkel',
         file: 'http://oj4t8z2d5.bkt.clouddn.com/sound-of-silence.mp3',
         cover: 'http://oj4t8z2d5.bkt.clouddn.com/sound-of-silence.jpg'
-    }
+    }, {
+        id: 7,
+        title: '君が好きだと叫びたいe',
+        artist: 'BAAD',
+        file: 'http://mr3.doubanio.com/9014b56dfa2d1bdff5461266c51f704f/1/fm/song/p1645995_128k.mp4',
+        cover: 'https://img3.doubanio.com/lpic/s4451253.jpg'
+    },{
+        id: 8,
+        title: 'Venus',
+        artist: 'Shocking Blue',
+        file: 'http://mr1.doubanio.com/cff9491fabb53342b1b6be99e1fcc297/0/fm/song/p308222_128k.mp4',
+        cover: 'https://img1.doubanio.com/lpic/s6868207.jpg'
+    },{
+        id: 9,
+        title: 'いつも何度でも',
+        artist: '竹仲絵里',
+        file: 'http://mr3.doubanio.com/3d2ac0d0026ec860a2c000710f1aa601/2/fm/song/p1670235_128k.mp4',
+        cover: 'https://img3.doubanio.com/lpic/s4620444.jpg'
+    },{
+        id: 10,
+        title: '500Miles',
+        artist: 'The Innocence Mission',
+        file: 'http://mr1.doubanio.com/f8b232272f7db82856949905e7b764fd/0/fm/song/p727320_128k.mp4',
+        cover: 'https://img3.doubanio.com/lpic/s1832150.jpg'
+    },
 
 ];
